@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/jkk111/favicon-fetch/issues"
   },
-  "homepage": "https://github.com/jkk111/favicon-fetch#readme"
+  "homepage": "https://github.com/jkk111/favicon-fetch#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jsdom": "^9.8.0",
+    "request": "^2.75.0"
+  }
 }
