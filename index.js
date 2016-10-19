@@ -8,6 +8,8 @@ var fs = require("fs");
 var stream = require("stream");
 app.use(express.static("static"));
 
+const MAXERRORS = 5;
+
 var cache = {
 
 }
@@ -70,7 +72,7 @@ function basic(domain, cb) {
 }
 
 function complex(domain, cb, reattempt) {
-  if(reattempt > 5) {
+  if(reattempt > MAXERRORS) {
     return cb(false);
   }
   if(cache[domain]) {
