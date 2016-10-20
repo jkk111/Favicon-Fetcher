@@ -8,7 +8,7 @@ var fs = require("fs");
 var stream = require("stream");
 app.use(express.static("static"));
 
-const MAXERRORS = 5;
+const MAXERRORS = 2;
 
 var cache = {
 
