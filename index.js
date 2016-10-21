@@ -14,15 +14,6 @@ var cache = {
 
 }
 
-app.get("/cache", function(req, res) {
-  var response = "<body>";
-  for(var domain in cache) {
-    response += `<a href="/get/${domain}">${domain}</a><br>`;
-  }
-  response += "</body>";
-  res.send(response);
-})
-
 function addToCache(domain, buf) {
   if(cache[domain]) {
     if(buf.toString() == cache[domain].data.toString()) {
